@@ -17,6 +17,7 @@ xhr.onreadystatechange = () => {
             `<div class="card">
                 <div class="card-body">
                     <h5 class="card-title">${response[i].title}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Article ${response[i].id}, By User-${response[i].userId}</h6>
                     <p class="card-text">${response[i].body}</p>
                 </div>
             </div>`;
