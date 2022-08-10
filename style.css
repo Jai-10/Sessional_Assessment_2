@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* navbar */
+
+
+
+
+/* blog container */
+.blog-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* blog card */
+.card {
+    width: 22%;
+    margin: 18px;
+    border-radius: 10px;
+}
+.card:hover {
+    transition: all ease-in-out .2s;
+    transform: translateY(-5px);
+}
+.card-body {
+    padding: 22px;
+}
+.card-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
