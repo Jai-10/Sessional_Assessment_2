@@ -29,3 +29,10 @@ xhr.onreadystatechange = () => {
 
 // 4. Send request
 xhr.send();
+
+
+
+
+
+
+// rotate new post icon from '+' to 'x'

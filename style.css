@@ -44,3 +44,45 @@ body {
 .card-text {
     margin-top: 15px;
 }
+
+
+
+
+
+
+
+/* new post icon */
+.icon-container {
+    z-index: 10;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    height: 55px;
+    width: 55px;
+    background-color: rgb(181, 181, 181);
+    border-radius: 50%;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+}
+.icon-container > i {
+    font-size: 40px;
+    color: rgb(28, 28, 28);
+    margin-top: 7px;
+    margin-left: 10px;
+}
+.icon-container:hover {
+    transform: translateY(-5px);
+}
+
+
+/* new post template */
+.new-post-template {
+    position: fixed;
+    z-index: 9;
+    height: 70vh;
+    width: 40vw;
+    bottom: 25px;
+    right: 25px;
+    background-color: rgb(186, 186, 186);
+    border-radius: 10px;
+}
