@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: 'Figtree', sans-serif;
+    background-color: #d8e1e9;
 }
 
 
@@ -36,17 +41,16 @@ body {
     padding: 20px;
     font-size: 22px;
     color: black;
+    box-shadow: 0 0 12px;
 }
-.navbar a {
-    text-decoration: none;
-}
+
 
 
 
 
 /* main */
 main {
-    margin-top: 230px;
+    margin-top: 200px;
 }
 
 
@@ -67,6 +71,7 @@ main {
     height: 50vh;
     margin: 18px;
     border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .card:hover {
     transition: all ease-in-out .2s;
@@ -80,6 +85,7 @@ main {
 .card-title {
     margin-bottom: 10px;
     font-size: 1.3rem;
+    font-weight: bold;
 }
 .card-subtitle {
     margin-top: 5px;
@@ -128,9 +134,9 @@ main {
     width: 55vw;
     bottom: 100px;
     right: -100%;
-    background-color: rgb(226, 226, 226);
+    background-color: #bad9b5;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     transition: all ease-in-out .5s;
 }
 #new-title, #new-body {
@@ -149,7 +155,9 @@ main {
     font-size: 30px;
     margin: 20px;
 }
-
+.new-post-template input {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
 
 
 
@@ -180,8 +188,11 @@ main {
 
 
 /* footer */
+footer {
+    margin-top: 100px;
+}
 footer div {
-    background-color: #000;
+    background-color: #0b132b;
 }
 footer div span {
     color: white;
