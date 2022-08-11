@@ -91,17 +91,10 @@ publishArticleBtn.addEventListener('click', (e) => {
     window.scrollTo(0, document.body.scrollHeight);
 
     // after a few seconds, add a popup saying 'article published!'
-    document.querySelector('#article-published-card').style.visibility = "visible";
-    document.querySelector("main").style.filter = "blur(3px)";
+    document.querySelector('#article-published-card').style.top = "90vh";
+    // close article published pop-up
+    setTimeout(()=>{
+        document.querySelector('#article-published-card').style.top = "105vh";
+    }, 2200);
 });
 
-
-
-// close article published pop-up
-document.querySelector("#close-article-popup").addEventListener('click', () => {
-    newPostTemplate.style.right = '-100%';
-    newPostBtn.style.transform = "rotate(-90deg)";
-
-    document.querySelector("#article-published-card").style.visibility = "hidden";
-    document.querySelector('main').style.filter = "blur(0px)"
-});
