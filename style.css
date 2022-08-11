@@ -81,17 +81,24 @@ body {
 
 /* new post template */
 .new-post-template {
-    margin-left: 300px;
     position: fixed;
     z-index: 9;
-    height: 70vh;
     width: 55vw;
-    bottom: 85px;
-    right: 25px;
+    bottom: 100px;
+    right: -100%;
     background-color: rgb(226, 226, 226);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all ease-in-out .5s;
 }
 .new-post-template input {
-    width: 200px;
+    width: 45vw;
+    margin: 20px;
+}
+.new-post-template button {
+    margin: 20px;
+}
+.new-template-heading p {
+    font-size: 30px;
+    margin: 20px;
 }

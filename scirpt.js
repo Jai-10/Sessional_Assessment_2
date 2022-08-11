@@ -3,7 +3,7 @@ const xhr = new XMLHttpRequest();
 
 // 2. Open portal of communication between client and server
 const url = `https://jsonplaceholder.typicode.com/posts?utm_source=Mailerlite&utm_medium=E-mail&utm_campaign=Test%20Series&utm_term=2022-08-09`;
-xhr.open('GET', url);
+xhr.open('GET', url, false);
 
 // 3. Perform a function when readyState is in transition
 xhr.onreadystatechange = () => {
@@ -37,15 +37,22 @@ xhr.send();
 
 // rotate new post icon from '+' to 'x' (on click it)
 const newPostBtn = document.querySelector("#newPostIcon");
+const newPostTemplate = document.querySelector("#newPostTemplate");
 let clickTemplate = 0;
 newPostBtn.addEventListener('click', () => {
     if (clickTemplate === 0) {
         newPostBtn.style.transform = "rotate(-45deg)";
         clickTemplate = 1;
+
+        // open new post template on clicking the new post icon
+        newPostTemplate.style.right = "25px";
     }
     else if (clickTemplate === 1) {
         newPostBtn.style.transform = "rotate(0deg)";
         clickTemplate = 0;
+        
+        // close new post template on clicking the new post icon
+        newPostTemplate.style.right = "-100%";
     }
 });
-// open and close new post template on clicking the new post icon
+
