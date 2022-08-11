@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 
@@ -13,6 +14,8 @@ body {
     left: 30px;
     cursor: pointer;
     transition: all ease-in-out .4s;
+    background-color: #fff;
+    border-radius: 50%;
 }
 #go-to-top:hover {
     transform: translateY(-4px);
@@ -37,7 +40,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 /* blog card */
@@ -135,10 +138,17 @@ body {
 
 /* article published */
 #article-published-card {
+    visibility: hidden;
     position: fixed;
     top:0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
+    height: 130px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: all ease-in-out .4s;
+}
+#article-published-card button {
+    margin: 5px;
 }

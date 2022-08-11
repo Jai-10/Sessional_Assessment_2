@@ -58,10 +58,9 @@ newPostBtn.addEventListener('click', () => {
     }
     else if (clickTemplate === 1) {
         newPostBtn.style.transform = "rotate(0deg)";
-        clickTemplate = 0;
-        
         // close new post template on clicking the new post icon
         newPostTemplate.style.right = "-100%";
+        clickTemplate = 0;
     }
 });
 
@@ -70,14 +69,15 @@ newPostBtn.addEventListener('click', () => {
 
 // publish new article (in blog container)
 const blogContainer = document.querySelector(".blog-container");
-const publishArticle = document.querySelector("#post-article");
-publishArticle.addEventListener('click', (e) => {
+const publishArticleBtn = document.querySelector("#post-article");
+publishArticleBtn.addEventListener('click', (e) => {
     e.preventDefault();
+
     const newPostTitle = document.querySelector("#new-title").value;
     const newPostBody = document.querySelector("#new-body").value;
     const newArticleID = document.querySelector("#new-article-id").value;
     const newUserID = document.querySelector("#new-user-id").value;
-    
+
     document.querySelector(".blog-container").innerHTML += 
     `<div class="card">
         <div class="card-body">
@@ -87,9 +87,21 @@ publishArticle.addEventListener('click', (e) => {
         </div>
     </div>`;
 
-    // scroll to bottom to see the newly published post
+    // scroll to bottom to see the newly published post (if the post is published)
     window.scrollTo(0, document.body.scrollHeight);
 
     // after a few seconds, add a popup saying 'article published!'
+    document.querySelector('#article-published-card').style.visibility = "visible";
+    document.querySelector("main").style.filter = "blur(3px)";
+});
 
+
+
+// close article published pop-up
+document.querySelector("#close-article-popup").addEventListener('click', () => {
+    newPostTemplate.style.right = '-100%';
+    newPostBtn.style.transform = "rotate(-90deg)";
+
+    document.querySelector("#article-published-card").style.visibility = "hidden";
+    document.querySelector('main').style.filter = "blur(0px)"
 });
