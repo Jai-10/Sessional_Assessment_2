@@ -56,3 +56,25 @@ newPostBtn.addEventListener('click', () => {
     }
 });
 
+
+
+
+// publish new article (in blog container)
+const blogContainer = document.querySelector(".blog-container");
+const publishArticle = document.querySelector("#post-article");
+publishArticle.addEventListener('click', (e) => {
+    e.preventDefault();
+    const newPostTitle = document.querySelector("#new-title").value;
+    const newPostBody = document.querySelector("#new-body").value;
+    
+    document.querySelector(".blog-container").innerHTML += 
+    `<div class="card">
+        <div class="card-body">
+            <h5 class="card-title">${newPostTitle}</h5>
+            <p class="card-text">${newPostBody}</p>
+        </div>
+    </div>`;
+
+    window.scrollTo(0,document.body.scrollHeight);
+});
+{/* <h6 class="card-subtitle mb-2 text-muted">Article ${response[i].id}, By User-${response[i].userId}</h6> */}
