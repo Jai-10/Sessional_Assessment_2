@@ -35,6 +35,15 @@ xhr.send();
 
 
 
+// go to top
+document.querySelector('.fa-circle-chevron-up').addEventListener('click', () => {
+    window.scrollTo(0, 0);
+});
+
+
+
+
+
 // rotate new post icon from '+' to 'x' (on click it)
 const newPostBtn = document.querySelector("#newPostIcon");
 const newPostTemplate = document.querySelector("#newPostTemplate");
@@ -66,15 +75,21 @@ publishArticle.addEventListener('click', (e) => {
     e.preventDefault();
     const newPostTitle = document.querySelector("#new-title").value;
     const newPostBody = document.querySelector("#new-body").value;
+    const newArticleID = document.querySelector("#new-article-id").value;
+    const newUserID = document.querySelector("#new-user-id").value;
     
     document.querySelector(".blog-container").innerHTML += 
     `<div class="card">
         <div class="card-body">
             <h5 class="card-title">${newPostTitle}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Article ${newArticleID}, By User-${newUserID}</h6>
             <p class="card-text">${newPostBody}</p>
         </div>
     </div>`;
 
-    window.scrollTo(0,document.body.scrollHeight);
+    // scroll to bottom to see the newly published post
+    window.scrollTo(0, document.body.scrollHeight);
+
+    // after a few seconds, add a popup saying 'article published!'
+
 });
-{/* <h6 class="card-subtitle mb-2 text-muted">Article ${response[i].id}, By User-${response[i].userId}</h6> */}

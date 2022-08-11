@@ -5,7 +5,28 @@ body {
 
 
 
+/* go to top */
+#go-to-top {
+    z-index: 15;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    cursor: pointer;
+    transition: all ease-in-out .4s;
+}
+#go-to-top:hover {
+    transform: translateY(-4px);
+}
+#go-to-top i {
+    font-size: 45px;
+    color: black;
+}
+
+
+
+
 /* navbar */
+
 
 
 
@@ -29,7 +50,7 @@ body {
 .card:hover {
     transition: all ease-in-out .2s;
     transform: translateY(-5px);
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .card-body {
     padding: 22px;
@@ -91,8 +112,13 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: all ease-in-out .5s;
 }
-.new-post-template input {
+#new-title, #new-body {
     width: 45vw;
+    margin: 20px;
+}
+#new-article-id, #new-user-id {
+    display: inline;
+    width: 21vw;
     margin: 20px;
 }
 .new-post-template button {
@@ -101,4 +127,18 @@ body {
 .new-template-heading p {
     font-size: 30px;
     margin: 20px;
+}
+
+
+
+
+
+/* article published */
+#article-published-card {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }

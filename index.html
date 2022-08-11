@@ -21,6 +21,12 @@
 
 <body>
 
+    <!-- go to top button -->
+    <div id="go-to-top">
+        <i class="fa-solid fa-circle-chevron-up"></i>
+    </div>
+
+
     <!-- navbar -->
     <nav class="navbar navbar-light bg-light">
         <div class="container">
@@ -60,8 +66,27 @@
                 <div class="form-group">
                   <input type="text" class="form-control" id="new-body" placeholder="Body..">
                 </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="new-article-id" placeholder="Article No.">
+                    <input type="text" class="form-control" id="new-user-id" placeholder="User No.">
+                </div>
                 <button type="submit" class="btn btn-dark" id="post-article">Post Article</button>
             </form>
+        </div>
+    </div>
+
+
+
+    <!-- article published card -->
+    <div class="card text-center" id="article-published-card">
+        <div class="card-header"> Yaay! </div>
+        <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <div class="card-footer text-muted">
+            2 days ago
         </div>
     </div>
 
