@@ -35,4 +35,17 @@ xhr.send();
 
 
 
-// rotate new post icon from '+' to 'x'
+// rotate new post icon from '+' to 'x' (on click it)
+const newPostBtn = document.querySelector("#newPostIcon");
+let clickTemplate = 0;
+newPostBtn.addEventListener('click', () => {
+    if (clickTemplate === 0) {
+        newPostBtn.style.transform = "rotate(-45deg)";
+        clickTemplate = 1;
+    }
+    else if (clickTemplate === 1) {
+        newPostBtn.style.transform = "rotate(0deg)";
+        clickTemplate = 0;
+    }
+});
+// open and close new post template on clicking the new post icon

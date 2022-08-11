@@ -4,6 +4,7 @@ body {
 }
 
 
+
 /* navbar */
 
 
@@ -28,6 +29,7 @@ body {
 .card:hover {
     transition: all ease-in-out .2s;
     transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 .card-body {
     padding: 22px;
@@ -59,7 +61,8 @@ body {
     right: 25px;
     height: 55px;
     width: 55px;
-    background-color: rgb(181, 181, 181);
+    background-color: rgb(226, 226, 226);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 50%;
     transition: all ease-in-out .3s;
     cursor: pointer;
@@ -69,6 +72,7 @@ body {
     color: rgb(28, 28, 28);
     margin-top: 7px;
     margin-left: 10px;
+    transition: all ease-in-out .3s;
 }
 .icon-container:hover {
     transform: translateY(-5px);
@@ -77,12 +81,17 @@ body {
 
 /* new post template */
 .new-post-template {
+    margin-left: 300px;
     position: fixed;
     z-index: 9;
     height: 70vh;
-    width: 40vw;
-    bottom: 25px;
+    width: 55vw;
+    bottom: 85px;
     right: 25px;
-    background-color: rgb(186, 186, 186);
+    background-color: rgb(226, 226, 226);
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.new-post-template input {
+    width: 200px;
 }
